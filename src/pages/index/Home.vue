@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home content-wrapper">
     <HomeTop/>
-    <ul v-for="i in 200">
+    <ul v-for="i in 200" :key="i">
       <li>
         <a
           href="http://router.vuejs.org/"
@@ -41,10 +41,13 @@
 <script>
 
 import HomeTop from './components/HomeTop'
+// import Menu from './components/Menu'
+
 export default {
   name: 'Home',
   components:{
-    HomeTop
+    HomeTop,
+    // Menu
   },
   data () {
     return {
@@ -56,6 +59,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.home {
+  position: relative;
+  padding-top: 200px;
+}
 h1,
 h2 {
   font-weight: normal;
