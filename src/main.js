@@ -7,6 +7,11 @@ import '@/style/index.less'; // 全局css
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+Vue.use(VueAwesomeSwiper /* { default global options } */);
+
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
