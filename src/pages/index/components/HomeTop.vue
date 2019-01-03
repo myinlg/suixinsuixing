@@ -22,7 +22,11 @@
           </div>
         </div>
         <div class="login">
-          <div :class="{'font-color':userHover}" @mouseover="userHover=true" @mouseout="userHover=false">
+          <div
+            :class="{'font-color':userHover}"
+            @mouseover="userHover=true"
+            @mouseout="userHover=false"
+            @click="$router.push({name:'user_login'})">
             <img v-if="!userHover" src="./img/user1.png" alt="">
             <img v-else src="./img/user2.png" alt="">
             <span>登录</span>

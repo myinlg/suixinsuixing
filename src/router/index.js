@@ -11,5 +11,22 @@ export default new Router({
       name: 'Home',
       component: Home,
     },
+
+    {
+      path: '/user',
+      component: resolve => require(['@/pages/user/user'], resolve),
+      children: [
+        {
+          path: '/',
+          redirect: '/user/login',
+          component: resolve => require(['@/pages/user/login'], resolve),
+        },
+        {
+          path: '/user/login',
+          name: 'user_login',
+          component: resolve => require(['@/pages/user/login'], resolve),
+        },
+      ]
+    }
   ],
 });
