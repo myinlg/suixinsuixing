@@ -31,7 +31,11 @@
             <img v-else src="./img/user2.png" alt="">
             <span>登录</span>
           </div>
-          <div :class="{'font-color':settingHover}" @mouseover="settingHover=true" @mouseout="settingHover=false">
+          <div
+            :class="{'font-color':settingHover}"
+            @mouseover="settingHover=true"
+            @mouseout="settingHover=false"
+            @click="$router.push({name:'user_setting'})">
             <img v-if="!settingHover" src="./img/setting1.png" alt="">
             <img v-else src="./img/setting2.png" alt="">
             <span>设置</span>

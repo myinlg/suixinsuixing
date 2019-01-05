@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="{'app-style':$route.name=='user_login'}">
-    <router-view class="li_list"/>
+    <router-view/>
   </div>
 </template>
 <script>

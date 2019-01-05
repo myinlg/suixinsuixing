@@ -11,7 +11,6 @@ export default new Router({
       name: 'Home',
       component: Home,
     },
-
     {
       path: '/user',
       component: resolve => require(['@/pages/user/user'], resolve),
@@ -26,7 +25,13 @@ export default new Router({
           name: 'user_login',
           component: resolve => require(['@/pages/user/login'], resolve),
         },
+        {
+          path: '/setting',
+          name:'user_setting',
+          component: resolve => require(['@/pages/setting/setting'], resolve),
+        }
       ]
-    }
+    },
+
   ],
 });
